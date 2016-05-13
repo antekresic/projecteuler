@@ -5,21 +5,16 @@ func main() {
 	result := 0
 	number := 600851475143
 	i := 1
-	notPrime := false
 	var primes []int
 
+mainloop:
 	for {
-		notPrime = false
 		i++
+		//check if i is a prime, continue if not
 		for _, v := range primes {
 			if i%v == 0 {
-				notPrime = true
-				break
+				continue mainloop
 			}
-		}
-
-		if notPrime {
-			continue
 		}
 
 		primes = append(primes, i)
