@@ -25,15 +25,15 @@ func main() {
 		primes = append(primes, i)
 
 		for {
-			if number%i == 0 {
-				number = number / i
-				result = i
-			} else {
+			if number%i != 0 {
 				break
 			}
+
+			number = number / i
+			result = i
 		}
 
-		if number == i || number == 1 {
+		if number == 1 {
 			break
 		}
 	}
