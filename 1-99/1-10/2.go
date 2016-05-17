@@ -5,12 +5,9 @@ func main() {
 	sum := 2
 	fib1 := 1
 	fib2 := 2
-	fibtemp := 0
 
 	for {
-		fibtemp = fib1 + fib2
-		fib1 = fib2
-		fib2 = fibtemp
+		fib1, fib2 = fib2, fib1+fib2
 
 		if fib2%2 == 0 {
 			sum += fib2
