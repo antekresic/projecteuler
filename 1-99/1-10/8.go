@@ -9,7 +9,7 @@ func main() {
 	slice := make([]byte, 13)
 	product := 1
 	maxproduct := 0
-	for i := 0; i < len(number)-12; i++ {
+	for i := 0; i < len(number)-13; i++ {
 		slice = number[i : i+13]
 		product = 1
 		for _, v := range slice {
